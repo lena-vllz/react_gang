@@ -9,4 +9,4 @@ function Result({result}) {
     )
 }
 
-export default Result
+export default Result;
