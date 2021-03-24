@@ -10,7 +10,7 @@ function App() {
     selected : {}
   });
   
-  const apiurl = "https://api.themoviedb.org/3/movie/550?api_key=f835613c6249d4cef6b0b9227f94b871"
+  const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=8774b09f"
 
   const search = (e) => {
     if (e.key === "Enter"){
