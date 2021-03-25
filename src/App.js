@@ -4,6 +4,8 @@ import axios from 'axios';
 import Search from './components/Search'
 import Results from './components/Results'
 import Popup from './components/Popup'
+import Header from './components/header'
+import { toggle } from './components/toggle';
 
 function App() {
   const [state, setState] = useState({
@@ -54,6 +56,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <header>
         <h1>Flick</h1>
       </header>
