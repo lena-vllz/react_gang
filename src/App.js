@@ -4,7 +4,6 @@ import axios from 'axios';
 import Search from './components/Search'
 import Results from './components/Results'
 import Popup from './components/Popup'
-const apiurl = "https://api.themoviedb.org/3/search/movie?api_key=f835613c6249d4cef6b0b9227f94b871"
 
 function App() {
   const [state, setState] = useState({
@@ -13,19 +12,19 @@ function App() {
     selected : {}
   });
   
-  
-  
+  const apiurl = "http://www.omdbapi.com/?apikey=8774b09f"
+
   const search = (e) => {
     if (e.key === "Enter") {
-      axios(apiurl + "&query=" + state.s).then(({data})=>{
+      axios(apiurl + "&s=" + state.s).then(({data})=>{
+        let results = data.Search;
+
         setState(prevState => {
-            let results = data.Search;
-           return { ...prevState, results: data.results } 
-        });
-      })
+           return { ...prevState, results: results }
+        })
+      });
     }
-  } 
-  
+  }
   const handleInput = (e) => {
     let s = e.target.value;
 
@@ -55,9 +54,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
         <h1>Flick</h1>
-      </header>
       <main>
         <Search handleInput={handleInput} search={search}/>
         <Results results={state.results} openPopup={openPopup} />

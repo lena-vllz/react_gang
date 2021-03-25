@@ -47,14 +47,15 @@ section {
     background: none;
     background-color:#5927FF ;
     border-radius: 28px ;
-    color: #FFFFFF;
-    font: Fiji;
+    color: #fff;
+    font-family: Fuji;
     font-size: 18px;
     transition: 0.4s ease-out;
 }
 
 .searchbox:focus{
-    box-shadow: 0px 0px 8px 3px #5927FF;
+    background-color:#fff ;
+    color: #5927FF;
 }
 
 .results{

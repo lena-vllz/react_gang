@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function Popup({selected, closePopup}) {
     return (
@@ -7,7 +7,6 @@ function Popup({selected, closePopup}) {
                 <h2>{ selected.Title } <span>({selected.Year})</span></h2>
                 <p className="rating"> Rating: {selected.imdbRating}/10</p>
                 <p className="author"> Actors: {selected.Actors}</p>
-                <p className="web"> Web: {selected.Homepage}</p>
                 <div className="plot">
                     <img src={selected.Poster} />
                     <p>{selected.Plot}</p>
