@@ -6,7 +6,7 @@ function Results ({results, openPopup}) {
         <React.Fragment>
         <section className="results">
             {results && results.map(result =>(
-                <Result key={result.imdbID} result={result} openPopup={openPopup}/>
+                <Result key={result.id} result={result} openPopup={openPopup}/>
             ))}
         </section>
         </React.Fragment>
