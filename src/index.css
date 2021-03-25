@@ -123,7 +123,11 @@ section {
 }
 
 .popup .content .rating{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.popup .content .author{
+    margin-bottom: 10px;
 }
 
 .popup .content .plot {
