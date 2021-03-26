@@ -4,6 +4,8 @@ import './header.css';
 import '../index.css';
 import Moon from './assets/moon.png';
 import Sun from './assets/sun.png';
+import axios from 'axios';
+import Search from '../components/Search';
 
 
 
@@ -18,7 +20,7 @@ function Popup({selected, closePopup}) {
     let state5 = starEmpty
     let table2 = []
     const rate = Math.round((selected.imdbRating/2)*2)/2
-    
+
 
     let nbStar = 0
     let tableStar = []
@@ -62,22 +64,25 @@ function Popup({selected, closePopup}) {
                          }
                      }
                  }
-                 
+
              }
          }
      }
-     
-     
+
+
 
     return (
         <section className="popup">
             <Header/>
             <div className="content">
+            {/* <Search handleInput={handleInput} search={search}/>
+            <Results results={state.results} openPopup={openPopup} />
+        {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup= {closePopup} /> : false} */}
                 <h2 className="title">{ selected.Title }</h2>
                 <p className="rating"> Rating: {rate}/10 </p>
                 <p className="rating"> Rating: {tableStar}/5</p>
 
-                <div className="rating"> 
+                <div className="rating">
                     <img src = {state1} alt="rating"></img>
                     <img src = {state2} alt="rating"></img>
                     <img src = {state3} alt="rating"></img>

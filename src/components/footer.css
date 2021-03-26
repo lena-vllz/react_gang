@@ -1,9 +1,19 @@
-.colormode
+body
 {
-  cursor: pointer;
-  width: 43px;
-  height: 43px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgColor);
+  justify-content: center;
+  align-items: center;
+  font-family: "Fuji Bold";
+  color: var(--textColor);
+  transition: all 0.4s ease;
 }
+
+/* .App{
+    display: flex;
+    align-items: center;
+} */
 
 .footer
 {

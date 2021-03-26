@@ -38,6 +38,8 @@ body
 {
     background-color: var(--bgColor);
     font-family: "Fuji Light";
+    display: flex;
+    justify-content: center;
 }
 
 header
@@ -56,6 +58,8 @@ main {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 section {
@@ -65,8 +69,6 @@ section {
 .searchbox-wrap{
     display: flex;
     justify-content: flex-end;
-    transform:translateY(-63px);
-    margin-left: 30em;
     position: fixed;
 }
 
@@ -109,6 +111,7 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    border-radius: 30px;
 }
 
 .results .result img{
