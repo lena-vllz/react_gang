@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, { useEffect } from 'react';
 import Header from './header';
+import Footer from './footer';
 import './header.css';
 import '../index.css';
 import Moon from './assets/moon.png';
@@ -16,61 +17,36 @@ function Popup({selected, closePopup}) {
     }
 
 
-//     const [state, setState] = useState({
-//         s: "",
-//         results: [],
-//         selected : {}
-//       });
-      
-//     const apiurl = "http://www.omdbapi.com/?apikey=8774b09f"
+    useEffect((event) => {
 
-
-//   const search = (e) => {
-//     if (e.key === "Enter") {
-//       axios(apiurl + "&s=" + state.s).then(({data})=>{
-//         let results = data.Search;
-
-//         setState(prevState => {
-//            return { ...prevState, results: results }
-//         })
-//       });
-//     }
-//   }
-
-//   const handleInput = (e) => {
-//     let s = e.target.value;
-
-//     setState(prevState => {
-//       return { ...prevState, s: s}
-//     });
-//   }
-
-//   const openPopup = id => {
-//     console.log(id)
-//     axios(apiurl + "&i=" + id).then(({data})=>{
-//       let result = data;
-
-//       setState(prevState => {
-//         return {...prevState, selected: result}
-//       });
-//     });
-//   }
-
-//   const closePopup = () => {
-//     setState(prevState =>{
-//       return{...prevState, selected:{}}
-//     });
-//   }
-
+        window.color = false
+        const colorMode = document.querySelector('.colormode')
+        const listener = () => {
+            if (window.color == false) 
+            {
+            colorMode.src = Moon
+            window.color = true
+            document.documentElement.setAttribute('data-theme', 'default')
+            }
+            else if (window.color == true) 
+            {
+            colorMode.src = Sun
+            window.color = false
+            console.log(Sun)
+            document.documentElement.setAttribute('data-theme', 'light')
+            }
+        };
+        colorMode.addEventListener('click', listener)
+        return () => {
+            document.removeEventListener('click', listener)
+        }
+    })
 
 
     return (
         <section className="popup">
             <Header/>
             <div className="content">
-            {/* <Search handleInput={handleInput} search={search}/>
-            <Results results={state.results} openPopup={openPopup} />
-        {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup= {closePopup} /> : false} */}
                 <h2 className="title">{ selected.Title }</h2>
                 <p className="rating"> Rating: {selected.imdbRating}/10</p>
                 <div className="contentFlex">
@@ -84,6 +60,7 @@ function Popup({selected, closePopup}) {
                 </div>
                 <button className="close" onClick={closePopup}>Close</button>
             </div>
+            <Footer/>
         </section>
     )
 };

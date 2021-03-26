@@ -10,19 +10,13 @@ body
   transition: all 0.4s ease;
 }
 
-/* .App{
-    display: flex;
-    align-items: center;
-} */
 
 .footer
 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
   width: 50vw;
   color: var(--grey);
-  margin-top: 40em;
+  margin-top: 20vw;
   text-align: center;
   font-weight: 500;
 }
@@ -30,7 +24,7 @@ body
 .logoFooter
 {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   width: 8%;
   margin-right: 2em;
 }
