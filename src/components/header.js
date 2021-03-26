@@ -1,14 +1,14 @@
+// importation of the needed elements in the following code
 import React, { useEffect } from 'react';
 import './header.css';
 import '../index.css';
 import Moon from './assets/moon.png';
 import Sun from './assets/sun.png';
-import Search from './Search';
-import App from '../App';
 
-
+// creation of the header component
 export default function Header() {
 
+    // creation of the dark mode function
     useEffect((event) => {
 
         window.color = false
@@ -34,7 +34,7 @@ export default function Header() {
         }
     })
     
-
+// display of the header's elements 
     return (
     <div className="header">
         <svg className="logo" xmlns="http://www.w3.org/2000/svg" width="122" height="44.6" viewBox="0 0 122 44.6">

@@ -1,8 +1,11 @@
+// importation of the needed elements in the following code
 import React, { useEffect } from 'react';
 import './footer.css';
 
+// creation of the footer component
 export default function Footer() {
 
+// display of the footer's elements 
     return (
         <div className="footer">
             <svg className="logoFooter" xmlns="http://www.w3.org/2000/svg" width="122" height="44.6" viewBox="0 0 122 44.6">
