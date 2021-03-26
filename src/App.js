@@ -5,7 +5,7 @@ import Search from './components/Search'
 import Results from './components/Results'
 import Popup from './components/Popup'
 import Slider from './components/Slider'
-
+import Header from './components/header'
 function App() {
   const [state, setState] = useState({
     s: "",
@@ -14,6 +14,7 @@ function App() {
   });
 
   const apiurl = "http://www.omdbapi.com/?apikey=8774b09f"
+
 
   const search = (e) => {
     if (e.key === "Enter") {
@@ -56,9 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Flick</h1>
-      </header>
+      <Header/>
       <main>
         <Search handleInput={handleInput} search={search}/>
         <Results results={state.results} openPopup={openPopup} />
