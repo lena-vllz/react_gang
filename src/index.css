@@ -58,7 +58,7 @@ header h1
 
 /* main {
     width: 100%;
-    /* height: 15em; */
+    /* height: 15em; 
     margin: 0 auto;
 } */
 
@@ -70,9 +70,11 @@ header h1
 
 .searchbox{
     display: block;
-    width: 100%;
+    margin: 0 auto;
+    /* width: 100%; */
     padding: 1em;
-    margin-bottom: 3em;
+    margin-bottom: -2em;
+    margin-top: 2em;
     border: none;
     outline: none;
     background: none;
@@ -173,6 +175,11 @@ input::placeholder{
 {
     font-size: 24px;
     color: #5902FF;
+}
+
+.hover_rating
+{
+    color: #F7F6EC;
 }
 
 /*
@@ -322,11 +329,6 @@ input::placeholder{
     height: 5em;
 }
 
-div.app{
-    height: auto;
-    width: 100%;
-}
-
 #root{
-    width: 100%;
+    width: 85vw;
 }
