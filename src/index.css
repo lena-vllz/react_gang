@@ -245,6 +245,8 @@ input::placeholder{
 
 .popup .content .rating{
     margin-bottom: 26px;
+    display: flex;
+    font-family: "Fuji Light";
 }
 
 .popup .content .author{
@@ -304,7 +306,7 @@ input::placeholder{
 }
 
 .author{
-    font-size: 1.8em;
+    font-size: 1.9em;
 }
 
 .plot{
@@ -312,7 +314,7 @@ input::placeholder{
     padding-top: 10px;
     padding-left: 15px;
     width: 900px;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .affiche_film{
@@ -326,7 +328,7 @@ input::placeholder{
 /* visual affectations of the slogan*/
 .slogan{
     /* position: fixed; */
-    font-family: "Fuji Light";
+    font-family: "Fuji Bold";
     font-size: 48px;
     text-align: center;
 }
@@ -342,4 +344,9 @@ input::placeholder{
 /* adjusting the general width of the div#root to fix bugs */
 #root{
     width: 85vw;
+}
+
+.stars
+{
+    margin-left: 0.5em;
 }
