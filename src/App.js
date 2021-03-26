@@ -21,7 +21,7 @@ function App() {
 
 
   const search = (e) => {
-    //if (e)
+    //if (event)
     //to update the search bar all the time
     //but error message
     //when you press enter it updates the search
