@@ -36,6 +36,7 @@
     position: relative;
 }
 
+/* affecting the whole body for general changes */
 body
 {
     display: flex;
@@ -46,10 +47,13 @@ body
     justify-content: center;
 }
 
-/* header
+.header
 {
-    padding: 50px 15px 0px;
-} */
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    margin: 0 auto;
+}
 
 header h1
 {
@@ -273,7 +277,7 @@ input::placeholder{
     font-size: larger;
     font-family: "Fuji Light";
     background: var(--primaryColor);
-    color: var(--textColor);
+    color: #F7F6EC;
     border-radius: 30px;
     border: none;
     outline: none;

@@ -80,28 +80,6 @@ body
   margin-left: 1em;
 }
 
-.prout
-{
-  display: flex;
-  align-items: center;
-  position: absolute;
-  background-color: var(--primaryColor);
-  border: none;
-  border-radius: 50px;
-  outline: none;
-  height: 4.5vh;
-  width: 13vw;
-  padding-left: 3.1em;
-  color: #F7F6EC;
-  font-family: "Fuji Light";
-  font-size: larger;
-}
-
-.prout::placeholder
-{
- color: #F7F6EC;
-}
-
 .colormode
 {
   cursor: pointer;
