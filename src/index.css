@@ -63,7 +63,7 @@ section {
     display: flex;
     justify-content: flex-end;
     transform:translateY(-63px);
-    margin-left: 70em;
+    margin-left: 30em;
     position: fixed;
 }
 

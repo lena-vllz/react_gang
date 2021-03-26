@@ -1,11 +1,12 @@
 import React, {Component, useState} from 'react';
 import axios from 'axios';
 
-import Search from './components/Search'
-import Results from './components/Results'
-import Popup from './components/Popup'
-import Slider from './components/Slider'
-import Header from './components/header'
+import Search from './components/Search';
+import Results from './components/Results';
+import Popup from './components/Popup';
+import Header from './components/header';
+import Footer from './components/footer';
+
 function App() {
   const [state, setState] = useState({
     s: "",
@@ -63,9 +64,7 @@ function App() {
         <Results results={state.results} openPopup={openPopup} />
         {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup= {closePopup} /> : false}
       </main>
-      <div>
-        <Slider></Slider>
-      </div>
+      <Footer/>
     </div>
   );
 }
