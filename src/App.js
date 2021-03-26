@@ -60,7 +60,9 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <div className="base"></div>
       <main>
+        <p className="slogan">Bienvenue sur Flick ! Trouvez dès maintenant <br/> votre film de ce soir</p>
         <Search handleInput={handleInput} search={search}/>
         <Results results={state.results} openPopup={openPopup} />
         {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup= {closePopup} /> : false}

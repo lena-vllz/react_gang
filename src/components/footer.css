@@ -1,18 +1,22 @@
-.colormode
+body
 {
-  cursor: pointer;
-  width: 43px;
-  height: 43px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgColor);
+  justify-content: center;
+  align-items: center;
+  font-family: "Fuji Bold";
+  color: var(--textColor);
+  transition: all 0.4s ease;
 }
+
 
 .footer
 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
   width: 50vw;
   color: var(--grey);
-  margin-top: 40em;
+  margin-top: 20vw;
   text-align: center;
   font-weight: 500;
 }
@@ -20,7 +24,7 @@
 .logoFooter
 {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   width: 8%;
   margin-right: 2em;
 }
