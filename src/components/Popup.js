@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './header';
+import './header.css';
+import '../index.css';
+import Moon from './assets/moon.png';
+import Sun from './assets/sun.png';
 
 function Popup({selected, closePopup}) {
 
