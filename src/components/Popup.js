@@ -27,8 +27,7 @@ function Popup({selected, closePopup}) {
                 <button className="close" onClick={closePopup}>Close</button>
             </div>
             <button className="close" onClick={closePopup}>Close</button>
-        </div>
-    </section>
+        </section>
     )
 };
 
