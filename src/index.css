@@ -1,3 +1,4 @@
+/* definition of the themes for the dark mode */
 :root
 {
     --primaryColor: #5902FF;
@@ -14,6 +15,7 @@
     --grey: #727272;
 }
 
+/* importation of the fonts */
 @font-face {
   font-family: "Fuji Bold";
   src: url("components/assets/Fuji-Bold.otf");
@@ -34,6 +36,7 @@
     position: relative;
 }
 
+/* affecting the whole body for general changes */
 body
 {
     display: flex;
@@ -65,12 +68,14 @@ header h1
     margin: 0 auto;
 } */
 
+/* placing the research bar */
 .searchbox-wrap{
     display: flex;
     justify-content: flex-end;
     /* position: fixed; */
 }
 
+/* placements and visual affectations of the research bar  */
 .searchbox{
     display: block;
     margin: 0 auto;
@@ -89,12 +94,14 @@ header h1
     transition: 0.4s ease-out;
 }
 
+/* visual affectations of the placeholder inside of the research bar */
 input::placeholder{
     color: #F7F6EC;
     font-family: "Fuji Light"
 
 }
 
+/* placements of the movies after the research */
 .results{
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +129,7 @@ input::placeholder{
     border-radius: 30px;
 }
 
+/* visual affectations of the posters of the movies */
 .poster
 {
     border-radius: 50px;
@@ -135,6 +143,7 @@ input::placeholder{
     border-radius: 40px;
 }
 
+/* display of the important elements of the movies with a hover */
 .hoover_div
 {
     display: flex;
@@ -200,6 +209,7 @@ input::placeholder{
     color: #223343;
 } */
 
+/* display of the popup elements */
 .popup{
     position: fixed;
     top: 0;
@@ -319,6 +329,7 @@ input::placeholder{
     box-shadow: 0px 19px 39px -8px rgba(0,0,0,0.63);
 }
 
+/* visual affectations of the slogan*/
 .slogan{
     /* position: fixed; */
     font-family: "Fuji Bold";
@@ -334,6 +345,7 @@ input::placeholder{
     height: 5em;
 }
 
+/* adjusting the general width of the div#root to fix bugs */
 #root{
     width: 85vw;
 }

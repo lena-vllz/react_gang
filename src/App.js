@@ -19,6 +19,10 @@ function App() {
 
 
   const search = (e) => {
+    //if (event)
+    //to update the search bar all the time
+    //but error message
+    //when you press enter it updates the search
     if (e.key === "Enter") {
       axios(apiurl + "&s=" + state.s).then(({data})=>{
         let results = data.Search;
@@ -55,7 +59,7 @@ function App() {
     });
   }
 
-  
+
 
   return (
     <div className="App">

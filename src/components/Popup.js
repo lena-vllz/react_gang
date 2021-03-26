@@ -1,18 +1,13 @@
 import React, { useEffect } from 'react';
 import Header from './header';
-import Footer from './footer';
 import './header.css';
 import '../index.css';
-import Moon from './assets/moon.png';
-import Sun from './assets/sun.png';
-import axios from 'axios';
-import Search from '../components/Search';
-
+/* importing the stars as .svg */
 import starEmpty from './assets/starEmpty.svg';
 import starFull from './assets/starFull.svg';
 import starHalf from './assets/starHalf.svg';
 
-
+/* creating the Popup fonction */
 function Popup({selected, closePopup}) {
     let state1 = starEmpty
     let state2 = starEmpty
@@ -20,8 +15,10 @@ function Popup({selected, closePopup}) {
     let state4 = starEmpty
     let state5 = starEmpty
     let table2 = []
+    /* Having the imbd Rating and rounding it on /5 */
     const rate = Math.round((selected.imdbRating/2)*2)/2
 
+    /* pushing the stars with the for element, each (selected.imdbRating/2)*2)/2 and half stars */
     for(let i = 0.5; i<=5; i+=0.5){
             if(i<=rate){
                 table2.push(i)
@@ -68,6 +65,7 @@ function Popup({selected, closePopup}) {
                 <h2 className="title">{ selected.Title }</h2>
                 {/* <p className="rating"> Rating: {tableStar}/5</p> */}
 
+                {/* showing the stat of the star half or full */}
                 <div className="rating"> Rating
                     <div className="stars">
                         <img src = {state1} alt="rating"></img>
@@ -77,7 +75,7 @@ function Popup({selected, closePopup}) {
                         <img src = {state5} alt="rating"></img>
                     </div>
                 </div>
-
+        	    {/* showing the poster, plot, year, author, director of the film */}
                 <div className="contentFlex">
                     <img class="affiche_film" src={selected.Poster} />
                     <div className="info_content">
@@ -87,6 +85,7 @@ function Popup({selected, closePopup}) {
                         <p className="plot">{selected.Plot}</p>
                     </div>
                 </div>
+                {/* creation of a button to go out of the popup box and onClick close it*/}
                 <button className="close" onClick={closePopup}>Close</button>
             </div>
         </section>
