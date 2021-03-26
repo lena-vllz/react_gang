@@ -99,7 +99,6 @@ function Popup({selected, closePopup}) {
                 </div>
                 <button className="close" onClick={closePopup}>Close</button>
             </div>
-            <Footer/>
         </section>
     )
 };
