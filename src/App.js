@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {Component, useState} from 'react';
 import axios from 'axios';
 
 import Search from './components/Search'
 import Results from './components/Results'
 import Popup from './components/Popup'
+import Slider from './components/Slider'
 import Header from './components/header'
-
 function App() {
   const [state, setState] = useState({
     s: "",
@@ -27,16 +27,17 @@ function App() {
       });
     }
   }
+
   const handleInput = (e) => {
     let s = e.target.value;
 
     setState(prevState => {
       return { ...prevState, s: s}
     });
-
   }
 
   const openPopup = id => {
+    console.log(id)
     axios(apiurl + "&i=" + id).then(({data})=>{
       let result = data;
 
@@ -44,7 +45,6 @@ function App() {
         return {...prevState, selected: result}
       });
     });
-
   }
 
   const closePopup = () => {
@@ -53,6 +53,7 @@ function App() {
     });
   }
 
+  
 
   return (
     <div className="App">
@@ -62,6 +63,9 @@ function App() {
         <Results results={state.results} openPopup={openPopup} />
         {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup= {closePopup} /> : false}
       </main>
+      <div>
+        <Slider></Slider>
+      </div>
     </div>
   );
 }
