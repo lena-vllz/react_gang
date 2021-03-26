@@ -1,5 +1,8 @@
 @font-face {font-family: "Fuji"; src: url("//db.onlinewebfonts.com/t/983372462b93da4c322cf0cec7cabcfe.eot"); src: url("//db.onlinewebfonts.com/t/983372462b93da4c322cf0cec7cabcfe.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/983372462b93da4c322cf0cec7cabcfe.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/983372462b93da4c322cf0cec7cabcfe.woff") format("woff"), url("//db.onlinewebfonts.com/t/983372462b93da4c322cf0cec7cabcfe.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/983372462b93da4c322cf0cec7cabcfe.svg#Fuji") format("svg"); }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+
 
 
 *
@@ -11,8 +14,8 @@
 
 body
 {
-    font-family: Fuji;
     background-color: #1C1C1C;
+    font-family:'Roboto Condensed', sans-serif;
 }
 
 header
@@ -99,7 +102,7 @@ section {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #445565;
+    background-color: #1C1C1C;
 
     overflow-y: scroll;
 }
@@ -113,9 +116,11 @@ section {
     color: #FFF;
 }
 
-.pop .content h2{
+.popup .content h2{
     font-size: 28px;
-    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+
 }
 
 .popup .content h2 span{
@@ -137,12 +142,6 @@ section {
     margin: 0px -15px 30px;
 }
 
-.popupp .content .plot img {
-    flex: 1 1 50;
-    max-width: 300px;
-    padding: 0px 15px;
-}
-
 .popup .content .plot p{
     flex: 1 1 50%;
     padding: 15px;
@@ -151,20 +150,54 @@ section {
 .popup .content .close {
     display: inline-block;
     padding: 15px 30px;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 700;
 
-    background: #4484C4;
+    background: #5927FF;
     color: #FFF;
-    border-radius: 8px;
+    border-radius: 30px;
     border: none;
     outline: none;
     appearance: none;
     cursor: pointer;
 
     transition: 0.4s ease-out;
+    margin-left: 600px;
 }
 
-.popu .content .close:hover{
+.popup .content .close:hover{
     background: #223343;
+}
+
+.contentFlex{
+    display: flex;
+    margin-top: 40px;
+}
+
+.info_content{
+    margin: 30px;
+}
+.director{
+    font-weight:600;
+    margin-bottom: 10px;
+}
+
+.year{
+    margin-bottom: 10px;
+}
+
+.author{
+    font-weight: 400;
+}
+
+.plot{
+    padding-top: 10px;
+    font-weight: 400;
+    padding-left: 15px;
+    width:500px;
+}
+
+.affiche_film{
+    height: 250px;
+    border-radius: 30px;
 }
