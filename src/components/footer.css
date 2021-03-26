@@ -1,0 +1,35 @@
+.colormode
+{
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+}
+
+.footer
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  color: var(--grey);
+  margin-top: 40em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.logoFooter
+{
+  display: flex;
+  align-items: flex-end;
+  width: 8%;
+  margin-right: 2em;
+}
+
+.students
+{
+  font-weight: 800;
+}
+
+p{
+  font-family: "Fuji Light";
+}
