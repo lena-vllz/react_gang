@@ -15,6 +15,7 @@ function App() {
 
   const apiurl = "http://www.omdbapi.com/?apikey=8774b09f"
 
+
   const search = (e) => {
     if (e.key === "Enter") {
       axios(apiurl + "&s=" + state.s).then(({data})=>{
@@ -32,7 +33,7 @@ function App() {
     setState(prevState => {
       return { ...prevState, s: s}
     });
- 
+
   }
 
   const openPopup = id => {
