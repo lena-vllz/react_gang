@@ -4,6 +4,7 @@ import axios from 'axios';
 import Search from './components/Search'
 import Results from './components/Results'
 import Popup from './components/Popup'
+import Header from './components/header'
 
 function App() {
   const [state, setState] = useState({
@@ -11,7 +12,7 @@ function App() {
     results: [],
     selected : {}
   });
-  
+
   const apiurl = "http://www.omdbapi.com/?apikey=8774b09f"
 
   const search = (e) => {
@@ -54,9 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Flick</h1>
-      </header>
+      <Header/>
       <main>
         <Search handleInput={handleInput} search={search}/>
         <Results results={state.results} openPopup={openPopup} />

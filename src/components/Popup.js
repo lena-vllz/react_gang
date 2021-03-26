@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Header from './header';
 
 function Popup({selected, closePopup}) {
     return (
         <section className="popup">
+            <Header/>
             <div className="content">
                 <h2>{ selected.Title } <span>({selected.Year})</span></h2>
                 <p className="rating"> Rating: {selected.imdbRating}/10</p>
