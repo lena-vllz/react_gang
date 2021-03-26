@@ -8,12 +8,12 @@ import Sun from './assets/sun.png';
 import axios from 'axios';
 import Search from '../components/Search';
 
+import starEmpty from './assets/starEmpty.svg';
+import starFull from './assets/starFull.svg';
+import starHalf from './assets/starHalf.svg';
 
 
 function Popup({selected, closePopup}) {
-    const starFull = "https://img.icons8.com/fluent/452/star-filled.png"
-    const starHalf = "https://img.icons8.com/material-outlined/452/star-half.png"
-    const starEmpty = "https://www.my-etiquettes.com/wp-content/uploads/2017/10/Bordure-etoile-jaune.svg"
     let state1 = starEmpty
     let state2 = starEmpty
     let state3 = starEmpty
@@ -22,20 +22,9 @@ function Popup({selected, closePopup}) {
     let table2 = []
     const rate = Math.round((selected.imdbRating/2)*2)/2
 
-
-    let nbStar = 0
-    let tableStar = []
-
-    for (var i = 0; i < rate; i++) {
-        nbStar ++
-        document.getElementById("test")
-        tableStar.push("🟊")
-    }
-
     for(let i = 0.5; i<=5; i+=0.5){
             if(i<=rate){
                 table2.push(i)
-                console.log(table2)
             }
         }
      if(table2.includes(0.5)){
@@ -77,15 +66,16 @@ function Popup({selected, closePopup}) {
             <Header/>
             <div className="content">
                 <h2 className="title">{ selected.Title }</h2>
-                <p className="rating"> Rating: {rate}/10 </p>
-                <p className="rating"> Rating: {tableStar}/5</p>
+                {/* <p className="rating"> Rating: {tableStar}/5</p> */}
 
-                <div className="rating">
-                    <img src = {state1} alt="rating"></img>
-                    <img src = {state2} alt="rating"></img>
-                    <img src = {state3} alt="rating"></img>
-                    <img src = {state4} alt="rating"></img>
-                    <img src = {state5} alt="rating"></img>
+                <div className="rating"> Rating
+                    <div className="stars">
+                        <img src = {state1} alt="rating"></img>
+                        <img src = {state2} alt="rating"></img>
+                        <img src = {state3} alt="rating"></img>
+                        <img src = {state4} alt="rating"></img>
+                        <img src = {state5} alt="rating"></img>
+                    </div>
                 </div>
 
                 <div className="contentFlex">
