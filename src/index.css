@@ -71,8 +71,8 @@ header h1
 .searchbox{
     display: block;
     width: 100%;
-    padding: 0.6em;
-    margin-top: 1em;
+    padding: 1em;
+    margin-bottom: 3em;
     border: none;
     outline: none;
     background: none;
@@ -94,18 +94,22 @@ input::placeholder{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 7em;
+    max-width: 85vw;
 }
 
 .result
 {
+    display: flex;
     border-radius: 300px;
+    width: 100%;
+    position: relative;
 }
 
 .results .result {
     min-width:250px;
-    padding: 0.5em;
     display: flex;
+    padding: 0.7em;
     justify-content: start;
     flex-direction: column;
     width: 7%;
@@ -115,13 +119,62 @@ input::placeholder{
 .poster
 {
     border-radius: 50px;
-    width: 70%;
-}
-.results .result img{
-    display: block;
-    width: 100%
+    width: 70%
 }
 
+
+.results .result img{
+    display: block;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.hoover_div
+{
+    display: flex;
+    justify-content: start;
+    align-self: start;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    border-radius: 40px;
+    padding: 2em;
+    /* padding-top: 9em; */
+    width: 68.5%;
+    height: 78%;
+    -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(30px);
+    background-color: rgba(50, 50, 50, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+.result:hover .hoover_div
+{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.hover_organise
+{
+    display: flex;
+    justify-content: start;
+    align-self: start;
+    flex-direction: column;
+}
+
+.hover_title
+{
+    font-size: 32px;
+    color: #F7F6EC;
+}
+
+.hover_year
+{
+    font-size: 24px;
+    color: #5902FF;
+}
+
+/* 
 .results .result h3{
     color: var(--textColor);
     font-size: 20px;
@@ -134,7 +187,7 @@ input::placeholder{
 .results .result:hover h3{
     background: var(--textColor);
     color: #223343;
-}
+} */
 
 .popup{
     position: fixed;
@@ -147,8 +200,15 @@ input::placeholder{
     overflow-y: scroll;
 }
 
+.content{
+    display: flex;
+    justify-content: center;
+}
+
 .popup .content{
     display: block;
+    display: flex;
+    flex-direction: column;
     width:100%;
     max-width: 960px;
     margin: 0 auto;
@@ -157,13 +217,13 @@ input::placeholder{
 }
 
 .popup .content h2{
-    font-size: 48px;
+    font-size: 4em;
     font-family: "Fuji Bold";
 
 }
 
 .popup .content h2 span{
-    font-size: 20px;
+    font-size: 2em;
 }
 
 .popup .content .rating{
@@ -187,7 +247,10 @@ input::placeholder{
 
 .popup .content .close {
     display: inline-block;
-    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 6em;
     font-size: larger;
     font-family: "Fuji Light";
     background: var(--primaryColor);
@@ -197,13 +260,12 @@ input::placeholder{
     outline: none;
     appearance: none;
     cursor: pointer;
-
     transition: 0.4s ease-out;
     margin-left: 600px;
 }
 
 .popup .content .close:hover{
-    background: #223343;
+    opacity: 0.7;
 }
 
 .contentFlex{
@@ -216,23 +278,24 @@ input::placeholder{
 }
 .director{
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 1.9em;
 }
 
 .year{
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 1.9em;
 }
 
 .author{
-    font-size: 30px;
+    font-size: 1.8em;
 }
 
 .plot{
+    display: flex;
     padding-top: 10px;
     padding-left: 15px;
     width: 900px;
-    font-size: 28px;
+    font-size: 1.8em;
 }
 
 .affiche_film{

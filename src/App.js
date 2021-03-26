@@ -6,6 +6,7 @@ import Results from './components/Results';
 import Popup from './components/Popup';
 import Header from './components/header';
 import Footer from './components/footer';
+import Result from './components/Result';
 
 function App() {
   const [state, setState] = useState({
