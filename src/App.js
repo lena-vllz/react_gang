@@ -13,6 +13,7 @@ function App() {
   });
   
   const apiurl = "http://www.omdbapi.com/?apikey=8774b09f"
+  
 
   const search = (e) => {
     if (e.key === "Enter") {
